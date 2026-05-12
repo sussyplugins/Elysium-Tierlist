@@ -1,4 +1,4 @@
-const tierlists = ['OVERALL', 'CRYSTAL', 'NETHPOT', 'SWORD', 'MACE', 'SMP', 'AXE', 'UHC'];
+const tierlists = ['OVERALL', 'CRYSTAL', 'NETHPOT', 'SWORD', 'MACE', 'SMP', 'AXE', 'UHC', 'SPEAR', 'POT', 'DIAMONDSMP'];
 const buttonsContainer = document.getElementById('buttons');
 const leaderboardContainer = document.getElementById('leaderboard');
 tierlists.forEach(tier => {

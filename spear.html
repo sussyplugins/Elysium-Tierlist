@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crystal Tier List</title>
+    <title>Spear Tier List</title>
     <link rel="stylesheet" href="landing.css">
     <link rel="stylesheet" href="tiers.css">
-
 
 </head>
 <body>
@@ -28,12 +27,12 @@
             const buttonsContainer = document.getElementById('buttons');
             const tierListElement = document.getElementById('leaderboard');
 
-
+      
             tierlists.forEach(tier => {
                 const button = document.createElement('button');
                 button.className = 'button';
                 
-                if (tier.toLowerCase() === 'nethpot') {
+                if (tier.toLowerCase() === 'spear') {
                     button.className += ' active';
                 }
                 
@@ -54,10 +53,10 @@
                 buttonsContainer.appendChild(button);
             });
 
-            fetch('tiers/nethpot.txt')
+            fetch('tiers/spear.txt')
                 .then(response => response.text())
                 .then(data => {
-                    const crystalMatch = data.match(/\[nethpot\]([\s\S]*?)(?=\[|$)/i);
+                    const crystalMatch = data.match(/\[spear\]([\s\S]*?)(?=\[|$)/i);
                     if (!crystalMatch) {
                         processTierData(data);
                     } else {
@@ -94,6 +93,7 @@
                     }
                 });
 
+                // Create all tier columns
                 for (let i = 5; i >= 1; i--) {
                     const tierElement = document.createElement('div');
                     tierElement.className = `tier tier-${i}`;
